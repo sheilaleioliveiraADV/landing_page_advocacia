@@ -1,0 +1,393 @@
+/*
+ * Sheila Oliveira Advocacia - Landing Page Styles
+ *
+ * This stylesheet defines the color palette and layout used on the
+ * landing page. Colors and typography are inspired by the client's
+ * branding: a rich red for highlights, a warm golden tone for
+ * secondary elements and calls‑to‑action, and neutral shades for
+ * text and backgrounds.
+ */
+
+/* CSS variables make it easy to adjust the colour scheme in one
+ * place. If you ever wish to tweak the hue or saturation of a
+ * colour, modify these values and the entire site will update
+ * accordingly.
+ */
+:root {
+  --primary-color: #c21f32;       /* deep red */
+  --secondary-color: #b58b2d;     /* warm gold */
+  --dark-color: #333333;          /* dark grey for text */
+  --light-color: #f9f5f3;         /* very light background */
+  --neutral-color: #ffffff;       /* pure white for cards and nav */
+}
+
+/* A simple reset to remove default margins and paddings from
+ * elements and ensure consistent sizing across browsers. The
+ * box‑sizing rule allows padding and borders to be included in
+ * element width calculations.
+ */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--dark-color);
+  background: var(--light-color);
+}
+
+/* Navigation bar styling. The nav remains visible at the top of
+ * the page as the user scrolls thanks to the sticky positioning.
+ */
+header {
+  background: var(--neutral-color);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.navbar {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Logo in the navigation bar: the link wraps an icon and text. */
+.logo-link {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+/* Icon in the navigation bar. Height is constrained and width adjusts
+ * automatically. A small margin separates it from the text. */
+.logo-icon {
+  height: 40px;
+  width: auto;
+  margin-right: 0.5rem;
+}
+
+/* Logo text inherits typography from the brand and matches the
+ * primary colour. */
+.logo-text {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: 1.5rem;
+  color: var(--primary-color);
+  /* Align the text vertically with the logo icon by matching the
+     line-height to the icon's height. This removes excess
+     baseline spacing and centres the text relative to the icon. */
+  line-height: 40px;
+}
+
+/* Full logo displayed in the hero section. It scales responsively
+ * up to a maximum width to ensure it fits on small screens. */
+
+.logo a {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: 1.5rem;
+  color: var(--primary-color);
+  text-decoration: none;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+}
+
+.nav-links li + li {
+  margin-left: 1.5rem;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: var(--dark-color);
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: var(--primary-color);
+}
+
+/* Mobile navigation toggle button (hamburger). Hidden on larger
+ * screens and displayed on small screens via media queries. */
+.nav-toggle {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 24px;
+  height: 18px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.nav-toggle .hamburger {
+  width: 100%;
+  height: 3px;
+  background: var(--dark-color);
+  border-radius: 2px;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+/* Hero section uses a prominent background colour and centres
+ * its content both horizontally and vertically. Text is kept
+ * concise to encourage visitors to scroll further.
+ */
+.hero {
+  background: var(--primary-color);
+  color: var(--neutral-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 4rem 2rem;
+}
+
+.hero-content h1 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.hero-content p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+/* Button styles for primary and secondary calls to action. Both
+ * share similar padding and border-radius while differing in
+ * colour schemes to stand apart.
+ */
+.btn-primary,
+.btn-secondary {
+  display: inline-block;
+  padding: 0.8rem 1.5rem;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.btn-primary {
+  background: var(--secondary-color);
+  color: var(--neutral-color);
+}
+.btn-primary:hover {
+  background: var(--dark-color);
+}
+
+.btn-secondary {
+  background: var(--neutral-color);
+  color: var(--primary-color);
+  border: 2px solid var(--primary-color);
+}
+.btn-secondary:hover {
+  background: var(--primary-color);
+  color: var(--neutral-color);
+}
+
+/* Shared spacing for major sections. Containers centre content
+ * horizontally and limit the maximum width to keep lines of text
+ * readable on large screens.
+ */
+.about,
+.services,
+.cta,
+.contact {
+  padding: 3rem 2rem;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+h2 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  color: var(--primary-color);
+}
+
+.about p {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+  font-size: 1.1rem;
+  color: var(--dark-color);
+}
+
+/* Service cards are flexibly arranged to wrap on small
+ * screens. Each card is spaced evenly and given a light
+ * background with a slight border and shadow.
+ */
+.services .service-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.card {
+  background: var(--neutral-color);
+  border: 1px solid #eee;
+  border-radius: 8px;
+  padding: 2rem;
+  flex: 1 1 280px;
+  max-width: 300px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  text-align: center;
+}
+
+.card h3 {
+  color: var(--primary-color);
+  margin-bottom: 0.8rem;
+  font-size: 1.3rem;
+}
+
+.card p {
+  font-size: 0.95rem;
+  color: var(--dark-color);
+}
+
+/* Call-to-action band uses the secondary colour for its
+ * background and centres the text. Buttons within share the
+ * appearance of the CTA.
+ */
+.cta {
+  background: var(--secondary-color);
+  color: var(--neutral-color);
+  text-align: center;
+}
+
+.cta h2 {
+  color: var(--neutral-color);
+}
+.cta p {
+  margin-bottom: 2rem;
+}
+
+/* Contact form styling. Inputs and textarea are full width and
+ * spaced out for ease of use. On narrower screens the form
+ * remains comfortable to fill in thanks to max-width constraints.
+ */
+.contact form {
+  max-width: 600px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.contact label {
+  margin-top: 1rem;
+  font-weight: 600;
+}
+
+.contact input,
+.contact textarea {
+  margin-top: 0.5rem;
+  padding: 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+  font-family: inherit;
+  resize: vertical;
+}
+
+.contact button {
+  margin-top: 1.5rem;
+  align-self: flex-start;
+}
+
+/* Layout for the contact buttons (e-mail and WhatsApp). Buttons
+ * appear side by side on larger screens and wrap on narrow screens.
+ */
+.contact-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.contact-buttons a {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1rem;
+}
+
+/* Icons within the contact buttons are sized proportionally to
+ * the surrounding text and inherit the current colour, ensuring
+ * they match the button's foreground colour.
+ */
+.contact-buttons .icon {
+  width: 1em;
+  height: 1em;
+  flex-shrink: 0;
+}
+
+/* Footer styling. The footer uses the dark colour to anchor
+ * the end of the page, with centred text and minimal spacing.
+ */
+footer {
+  background: var(--dark-color);
+  color: var(--neutral-color);
+  padding: 2rem 1rem;
+}
+
+footer .footer-content {
+  text-align: center;
+}
+
+footer p + p {
+  margin-top: 0.5rem;
+}
+
+/* Responsive behaviour for small screens. Service cards stack
+ * vertically, and the navigation can be adapted with a menu
+ * toggle if needed in future enhancements.
+ */
+@media (max-width: 768px) {
+  /* Stack service cards vertically on small screens */
+  .services .service-cards {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  /* Show the nav toggle and hide the horizontal menu */
+  .nav-toggle {
+    display: flex;
+  }
+  .nav-links {
+    position: absolute;
+    top: 64px; /* height of header */
+    right: -220px; /* hide offscreen by default */
+    width: 200px;
+    flex-direction: column;
+    background: var(--neutral-color);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+    padding: 1rem;
+    transition: right 0.3s ease;
+    z-index: 999;
+  }
+  .nav-links.open {
+    right: 0;
+  }
+  .nav-links li + li {
+    margin-left: 0;
+    margin-top: 1rem;
+  }
+}

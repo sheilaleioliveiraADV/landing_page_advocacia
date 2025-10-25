@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<!--
+  Sheila Oliveira Advocacia - Landing Page
+
+  This page serves as a simple online presence for a law office
+  specialising in labour, family and consumer law. The layout is
+  responsive and emphasises clear calls to action to encourage
+  potential clients to get in touch. Colours follow the palette
+  shown in the provided branding image.
+-->
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sheila Oliveira Advocacia</title>
+    <!-- Load Google Fonts for elegant typography -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Link the custom styles -->
+    <link rel="stylesheet" href="style.css" />
+    <!-- Icons are embedded inline in the contact buttons, so no external
+         library is needed. If you wish to use Font Awesome via CDN
+         instead, uncomment the line below and replace the inline
+         <svg> elements in the contact section with <i> tags. -->
+    <!--
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-xZ8f+B6PvW2GpUC6N8HCxnUzJhsm8o7X41VhO0M4eE3+YfQ3kqZPZRmL+X/5p5T5mZ1xjFFKDa26J/QbNtTX1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    -->
+  </head>
+  <body>
+    <!-- Header and navigation -->
+    <header>
+      <nav class="navbar">
+        <div class="logo">
+          <a href="#home" class="logo-link">
+            <img src="logo_sheila_50x50.png" alt="Logo Sheila Oliveira" class="logo-icon" />
+            <span class="logo-text">Sheila Oliveira</span>
+          </a>
+        </div>
+        <ul class="nav-links">
+          <li><a href="#about">Sobre</a></li>
+          <li><a href="#services">Áreas de Atuação</a></li>
+          <li><a href="#contact">Contato</a></li>
+        </ul>
+        <!-- Mobile navigation toggle (hamburger) -->
+        <button class="nav-toggle" aria-label="Abrir menu" type="button">
+          <span class="hamburger"></span>
+          <span class="hamburger"></span>
+          <span class="hamburger"></span>
+        </button>
+      </nav>
+    </header>
+
+    <!-- Hero section with a strong headline and tagline -->
+    <section id="home" class="hero">
+      <div class="hero-content">
+        <h1>Defendendo seus direitos com excelência</h1>
+        <p>
+          Especialista em Direito do Trabalho, Direito de Família e Direito do
+          Consumidor
+        </p>
+        <a href="#contact" class="btn-primary">Entre em Contato</a>
+      </div>
+    </section>
+
+    <!-- About section describing the lawyer's background -->
+    <section id="about" class="about">
+      <div class="container">
+        <h2>Sobre Sheila Oliveira</h2>
+        <p>
+          Com anos de experiência no atendimento a trabalhadores, famílias e
+          consumidores, Sheila Oliveira oferece soluções jurídicas
+          personalizadas e de alta qualidade. O seu compromisso é defender
+          direitos com ética, dedicação e transparência.
+        </p>
+      </div>
+    </section>
+
+    <!-- Services section outlining practice areas -->
+    <section id="services" class="services">
+      <div class="container">
+        <h2>Áreas de Atuação</h2>
+        <div class="service-cards">
+          <div class="card">
+            <h3>Direito do Trabalho</h3>
+            <p>
+              Aconselhamento e representação em reclamações trabalhistas,
+              verbas rescisórias, horas extras, equiparações salariais e
+              outras demandas do universo laboral.
+            </p>
+          </div>
+          <div class="card">
+            <h3>Direito de Família</h3>
+            <p>
+              Atuação em processos de divórcio, pensão alimentícia, guarda
+              e regulamentação de visitas, união estável e planejamento
+              sucessório.
+            </p>
+          </div>
+          <div class="card">
+            <h3>Direito do Consumidor</h3>
+            <p>
+              Defesa de consumidores em casos de cobrança indevida, vícios
+              de produtos ou serviços, contratos abusivos e ações
+              indenizatórias.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Call‑to‑action section that encourages contact -->
+    <section id="cta" class="cta">
+      <div class="container">
+        <h2>Precisa de ajuda jurídica?</h2>
+        <p>
+          Entre em contato para agendar uma consulta e esclarecer suas
+          dúvidas. Será um prazer atendê‑lo(a).
+        </p>
+        <a href="#contact" class="btn-secondary">Falar com Sheila</a>
+      </div>
+    </section>
+
+    <!-- Contact form section. Using Formspree, the form can send
+         submissions to an email address without requiring a back‑end.
+         Replace `your-form-id` with the actual ID provided by
+         Formspree when you set up the service. If you prefer,
+         remove the `action` attribute to disable form submission.
+    -->
+    <section id="contact" class="contact">
+      <div class="container">
+        <h2>Contato</h2>
+        <p>
+          Escolha uma das formas de contato abaixo ou preencha o formulário:
+        </p>
+        <div class="contact-buttons">
+          <a
+            href="mailto:sheila.lei.oliveira@gmail.com"
+            class="btn-primary"
+          >
+            <!-- Envelope icon (Font Awesome Free solid envelope) -->
+            <svg class="icon" aria-hidden="true" focusable="false" viewBox="0 0 512 512">
+              <path
+                fill="currentColor"
+                d="M48 64C21.5 64 0 85.5 0 112c0 15.1 7.1 29.3 19.2 38.4L236.8 313.6c11.4 8.5 27 8.5 38.4 0L492.8 150.4c12.1-9.1 19.2-23.3 19.2-38.4c0-26.5-21.5-48-48-48L48 64zM0 176L0 384c0 35.3 28.7 64 64 64l384 0c35.3 0 64-28.7 64-64l0-208L294.4 339.2c-22.8 17.1-54 17.1-76.8 0L0 176z"
+              />
+            </svg>
+            E‑mail
+          </a>
+          <a
+            href="https://wa.me/5519997699513"
+            class="btn-secondary"
+            target="_blank"
+            rel="noopener"
+          >
+            <!-- WhatsApp icon (Font Awesome Free brands whatsapp) -->
+            <svg class="icon" aria-hidden="true" focusable="false" viewBox="0 0 448 512">
+              <path
+                fill="currentColor"
+                d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z"
+              />
+            </svg>
+            WhatsApp
+          </a>
+        </div>
+        <form
+          action="https://formspree.io/f/mkgpwnoo"
+          method="POST"
+        >
+          <label for="name">Nome</label>
+          <input type="text" id="name" name="name" required />
+
+          <label for="email">E‑mail</label>
+          <input
+            type="email"
+            id="email"
+            name="_replyto"
+            required
+          />
+
+          <label for="message">Mensagem</label>
+          <textarea
+            id="message"
+            name="message"
+            rows="5"
+            required
+          ></textarea>
+
+          <button type="submit" class="btn-primary">Enviar</button>
+        </form>
+      </div>
+    </section>
+
+    <!-- Footer with copyright and location -->
+    <footer>
+      <div class="container footer-content">
+        <p>
+          &copy; <span id="year"></span> Sheila Oliveira Advocacia. Todos os
+          direitos reservados.
+        </p>
+        <p>Campinas, São Paulo, Brasil</p>
+      </div>
+    </footer>
+
+    <!-- Script to automatically insert the current year -->
+    <script>
+      document.getElementById('year').textContent = new Date().getFullYear();
+
+      // Toggle mobile navigation menu
+      const navToggle = document.querySelector('.nav-toggle');
+      const navLinks = document.querySelector('.nav-links');
+      navToggle.addEventListener('click', () => {
+        navLinks.classList.toggle('open');
+      });
+    </script>
+  </body>
+</html>
