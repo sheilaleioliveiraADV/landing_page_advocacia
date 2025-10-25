@@ -8,9 +8,15 @@ encontrá‑la facilmente e entrar em contato.
 ## Arquivos incluídos
 
 - **index.html**: a página principal com seções para apresentação,
-  áreas de atuação, chamada para contato e formulário de contato.
+  áreas de atuação, chamada para contato e formulário de contato. A
+  `<head>` inclui meta tags de descrição e uma marcação JSON‑LD com
+  dados estruturados do tipo `LegalService` para SEO.
 - **style.css**: estilos personalizados baseados na paleta de cores
   fornecida (vermelho, dourado e tons neutros).
+- **sitemap.xml**: arquivo em formato XML que lista as URLs do site,
+  ajudando os mecanismos de busca a descobrir e indexar seu conteúdo.
+- **robots.txt**: arquivo de texto que permite a indexação por robôs
+  dos buscadores e aponta para o `sitemap.xml`.
 - **README.md**: este guia rápido com instruções para publicação.
 
 ## Como visualizar localmente
@@ -26,13 +32,25 @@ navegador.
   [Formspree](https://formspree.io/) para enviar mensagens por e‑mail
   sem necessidade de back‑end. Para que as mensagens sejam entregues
   corretamente, crie uma conta no Formspree, configure um formulário e
-  substitua `your-form-id` no atributo `action` do `<form>` pelo ID
-  gerado.
+  substitua o valor do atributo `action` no `<form>` pelo ID
+  gerado (já configurado no arquivo de exemplo).
 - **Informações de contato**: atualize o endereço de e‑mail no link
-  `mailto:` e adicione outros detalhes (telefone, redes sociais) na
-  seção "Contato" ou no rodapé, conforme necessário.
+  `mailto:`, a URL do WhatsApp e outros detalhes (telefone, redes
+  sociais) na seção "Contato" ou no rodapé, conforme necessário.
 - **Conteúdo**: adapte textos, títulos e imagens conforme as
   especialidades e o tom desejado.
+
+- **Meta tags e dados estruturados**: ajuste a tag `<title>`, a
+  `<meta name="description">` e o bloco JSON‑LD no `<head>`
+  (`index.html`) para refletir o seu nome, as palavras‑chave mais
+  importantes e as informações de localização (cidade, estado,
+  endereço completo). O arquivo de exemplo usa dados genéricos que
+  devem ser atualizados.
+
+- **Sitemap e robots**: se adicionar novas páginas, atualize o
+  `sitemap.xml` com todas as URLs e modifique o domínio em
+  `robots.txt` e nos dados estruturados para apontar para o domínio
+  real quando o site estiver publicado.
 
 ## Como publicar
 

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <!-- Replace with the actual domain where the site will be hosted -->
+    <loc>https://seu-dominio.com/</loc>
+    <!-- Last modification date of the homepage -->
+    <lastmod>2025-10-24</lastmod>
+    <!-- How often the content is likely to change -->
+    <changefreq>monthly</changefreq>
+    <!-- Priority relative to other URLs on the site (1.0 is highest) -->
+    <priority>1.0</priority>
+  </url>
+</urlset>
